@@ -334,3 +334,32 @@ link.style.color="#00eaff";
 
 
 });
+
+// Mobile Toggle Menu
+
+const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menu-btn");
+
+menuBtn.addEventListener("click", function () {
+
+    menu.classList.toggle("active");
+
+    if (menu.classList.contains("active")) {
+        menuBtn.innerHTML = '<i class="fas fa-times"></i>';
+    } else {
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+
+});
+
+// Link click hone par menu band ho jayega
+document.querySelectorAll("#menu a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        menu.classList.remove("active");
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+
+    });
+
+});
