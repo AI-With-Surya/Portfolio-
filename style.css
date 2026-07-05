@@ -602,3 +602,88 @@ nav ul{
     color:#00eaff;
 
 }
+}
+
+/* PREMIUM MOBILE MENU */
+
+#menu-btn{
+
+    display:none;
+    font-size:30px;
+    color:#00eaff;
+    cursor:pointer;
+    z-index:1200;
+
+}
+
+@media(max-width:900px){
+
+nav{
+
+    position:relative;
+
+}
+
+#menu-btn{
+
+    display:block;
+
+}
+
+nav ul{
+
+    position:fixed;
+
+    top:0;
+    right:-320px;
+
+    width:280px;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    gap:35px;
+
+    background:rgba(17,24,39,.88);
+
+    backdrop-filter:blur(25px);
+
+    box-shadow:-10px 0 35px rgba(0,0,0,.4);
+
+    transition:.5s;
+
+    z-index:999;
+
+}
+
+nav ul.active{
+
+    right:0;
+
+}
+
+nav ul li{
+
+    list-style:none;
+
+}
+
+nav ul li a{
+
+    color:white;
+    font-size:22px;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#00eaff;
+
+}
+
+}
